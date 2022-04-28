@@ -8,7 +8,7 @@ const client = new ApolloClient({
 
 export const GET_PRODUCTS = gql`
     query {
-        category {
+        categories {
             products {
                 id
                 name

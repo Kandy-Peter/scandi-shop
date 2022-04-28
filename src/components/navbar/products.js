@@ -1,12 +1,23 @@
 import React from 'react'
-import { useQuery } from '@apollo/client'
-import { GET_PRODUCTS } from '../../Graphql/data'
+import useCharacters from '../../Graphql/useCharacters'
 
 const Products = () => {
-    const { error, data, loading } = useQuery(GET_PRODUCTS)
-    console.log({ error, data, loading });
+
+  const { error, data, loading } = useCharacters();
+
+  if (loading) return <div>Speinner....</div>
+  if (error) return <div>SOmething wrong happened</div>
+
   return (
-    <div>Products</div>
+    <div className="products">
+      {data.categories[0].products.map( item => (
+        <div className="product-card">
+          <img src={item.gallery[0]} alt={item.name} />
+          <h3>{item.name}</h3>
+          <p>{item.prices[0].currency.symbol}{item.prices[0].amount}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 
