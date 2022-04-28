@@ -12,16 +12,18 @@ const Clothes = () => {
   return (
     <div className="container">
       <Header />
-      {data.categories[1].products.map( item => (
-        <Card
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          image = {item.gallery[0]}
-          prices = {item.prices[0].currency.symbol}
-          amount = {item.prices[0].amount}
-        />
-      ))}
+      <div className="products-cards">
+        {data.categories[1].products.map( item => (
+          <Card
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            image = {item.gallery[0]}
+            prices = {item.prices[0].currency.symbol}
+            amount = {item.prices[0].amount}
+          />
+        ))}
+      </div>
     </div>
   )
 }

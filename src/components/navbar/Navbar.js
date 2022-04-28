@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul className="nav-links flex-center-center">
+      <ul className="nav-links">
         {links.map((link) => (
           <li key={link.id} className="nav-item">
             <NavLink to={link.path} className={(navData) => (navData.isActive ? 'active-link' : 'none')}>{link.text}</NavLink>

@@ -19,6 +19,7 @@ const Products = () => {
           image = {item.gallery[0]}
           prices = {item.prices[0].currency.symbol}
           amount = {item.prices[0].amount}
+          isInStock = {item.inStock}
         />
       ))}
     </div>

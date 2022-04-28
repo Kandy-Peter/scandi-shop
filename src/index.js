@@ -1,9 +1,9 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
 import App from './App';
 import { ApolloProvider } from '@apollo/client';
 import client from './Graphql/data';
+import './styles/index.scss';
 
 const root = createRoot(document.getElementById('root'))
 
