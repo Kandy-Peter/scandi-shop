@@ -6,7 +6,6 @@ const Home = () => (
   <div className="container">
     <Header />
     <Products />
-    <p>Home page</p>
   </div>
 )
 

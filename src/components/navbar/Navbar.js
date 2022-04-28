@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-
   const links = [
     {
       id: 1,
@@ -11,13 +10,13 @@ const Navbar = () => {
     },
     {
       id: 2,
-      path: '/Tech',
-      text: 'Tech',
+      path: '/Clothes',
+      text: 'Clothes',
     },
     {
       id: 3,
-      path: '/Women',
-      text: 'Women',
+      path: '/Tech',
+      text: 'Tech',
     },
   ];
 

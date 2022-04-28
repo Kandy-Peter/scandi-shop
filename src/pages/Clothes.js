@@ -3,7 +3,7 @@ import Header from '../components/navbar/Header';
 import useCharacters from '../Graphql/useCharacters';
 import Card from '../components/Card';
 
-const Tech = () => {
+const Clothes = () => {
   const { error, data, loading } = useCharacters();
 
   if (loading) return <div>Speinner....</div>;
@@ -12,7 +12,7 @@ const Tech = () => {
   return (
     <div className="container">
       <Header />
-      {data.categories[2].products.map( item => (
+      {data.categories[1].products.map( item => (
         <Card
           key={item.id}
           id={item.id}
@@ -26,4 +26,4 @@ const Tech = () => {
   )
 }
 
-export default Tech;
+export default Clothes;
