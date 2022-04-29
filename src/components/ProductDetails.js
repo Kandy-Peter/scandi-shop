@@ -17,7 +17,20 @@ const ProductDetails = () => {
     <div className="product-details">
       {productDetail.map( item => (
         <div className="item-row" key={item.id}>
-          <img src={item.gallery[0]} alt={item.name} />
+          <div className="img_side">
+            {item.gallery.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={item.name}
+              />
+            ))}
+          </div>
+          <div className="img-selected">
+            <img src="" alt="img_product" />
+          </div>
+          <div className="card-details">
+          </div>
         </div>
       ))}
     </div>
