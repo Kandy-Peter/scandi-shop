@@ -1,5 +1,17 @@
 .product-details {
   .item-row {
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .img_side {
+      width: 100px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+      }
+    }
   }
 }
