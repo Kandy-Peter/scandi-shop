@@ -2,6 +2,7 @@ import React from 'react';
 import useCharacters from '../Graphql/useCharacters';
 import { useParams } from 'react-router-dom';
 import CardDetails from './cardDetails';
+import Header from './navbar/Header';
 
 const ProductDetails = () => {
 
@@ -14,14 +15,16 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
+      <Header />
       {productDetail.map( item => (
-        <div className="item-row" key={item.id}>
+        <div key={item.id}>
           <CardDetails
             images={item.gallery}
             prices={item.prices}
             itemDetails={item}
             itemName={item.name}
             brand={item.brand}
+            attributes={item.attributes}
             descript={item.description}
           />
         </div>
