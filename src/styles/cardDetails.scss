@@ -1,0 +1,116 @@
+@import './_colors';
+
+.product-details {
+  .item-row {
+    margin: 50px 110px;
+    display: flex;
+
+    .img_side {
+      width: 100px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+    
+    .img-selected {
+      width: 45%;
+      overflow: hidden;
+      margin-left: 1.5rem;
+      
+      img {
+        width: 100%;
+      }
+    }
+
+    .card-details {
+      flex: 1;
+      margin-left: 3rem;
+
+      h3,
+      h5 {
+        font-size: 30px;
+        font-weight: 200;
+        margin-top: 10px;
+      }
+
+      h3 {
+        margin-top: 0;
+        font-weight: 600;
+      }
+
+      h6 {
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .attributes-clm {
+        margin: 40px 0;
+
+        ul {
+          display: flex;
+          align-items: center;
+
+          li:hover,
+          li:active {
+            border: 1px solid $green_color;
+            transition: 0.5s;
+          }
+
+          .size-box{
+            border: 1px solid #1D1F22;
+            min-width: 63px;
+            height: 45px;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+              background-color: $text_color;
+              color: $primary_bg;
+            }
+          }
+        }
+      }
+
+      .price {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 1.3rem 0;
+      }
+
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 32px;
+        width: 292px;
+        height: 52px;
+        background: $green_color;
+        border: none;
+        outline: none;
+        margin-bottom: 40px;
+        color: $primary_bg;
+        font-size: 18px;
+
+        &:hover {
+          background-color: #1acf4b;
+          transition: 0.5s;
+        }
+      }
+
+      .prod_description {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.59px;
+      }
+    }
+  }
+}
