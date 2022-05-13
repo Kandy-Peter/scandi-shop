@@ -5,6 +5,7 @@ import Products from '../components/products';
 const Home = () => (
   <div className="container">
     <Header />
+    <h2>All</h2>
     <Products />
   </div>
 )

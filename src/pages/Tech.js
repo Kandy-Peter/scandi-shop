@@ -12,6 +12,7 @@ const Tech = () => {
   return (
     <div className="container">
       <Header />
+      <h2>Tech</h2>
       <div className="products-cards">
         {data.categories[2].products.map( item => (
           <Card

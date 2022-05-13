@@ -12,6 +12,7 @@ const Clothes = () => {
   return (
     <div className="container">
       <Header />
+      <h2>Clothes</h2>
       <div className="products-cards">
         {data.categories[1].products.map( item => (
           <Card

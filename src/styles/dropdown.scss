@@ -1,0 +1,44 @@
+@import './_colors';
+
+.dropdown {
+  width: 70px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  user-select: none;
+
+  .dropdown_btn {
+    font-weight: bold;
+    width: 25px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .dropdown_content {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: $primary_bg;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    font-weight: bold;
+    width: 120px;
+
+    .dropdown_item {
+      width: 100%;
+      padding: 6px;
+      z-index: 100;
+      padding: 0.7rem;
+      transition: all 0.25s;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+}
